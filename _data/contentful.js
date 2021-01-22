@@ -5,7 +5,11 @@ const client = contentful.createClient({
 });
 
 module.exports = async function() {
-    const entries = await client.getEntries({ content_type: 'page', order: 'sys.createdAt' })        
+    const entries = await client.getEntries({ 
+            content_type: 'page', 
+            order: 'sys.createdAt',
+            include: 2
+        })        
         .then(function(response) {
             const page = response.items
             .map(function(page) {
@@ -16,12 +20,11 @@ module.exports = async function() {
         })   
         .catch(console.error);
     
-    
     const data = {
         pages : entries.filter((entry) => entry.slug != 'home'),
         home: entries.filter((entry) => entry.slug === 'home')
     }
 
-    console.log(data);
+    // console.log(data);
     return data;
 }

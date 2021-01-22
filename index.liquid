@@ -1,11 +1,8 @@
----
-data: contentful.home
+--- 
 permalink: "/"
 layout: layout.liquid
 eleventyComputed:
   title: "{{ globals.siteName }}"
 ---
 
-<h1>
-  {{ data.title }}
-</h1>
+{% include "_includes/blocksList" with page : contentful.home[0] %}

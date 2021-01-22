@@ -1,4 +1,22 @@
 require('dotenv').config();
+const { documentToHtmlString } = require('@contentful/rich-text-html-renderer');
+  
+module.exports = 
+    function(eleventyConfig) {  
+
+        eleventyConfig.setLiquidOptions({
+            dynamicPartials: true
+        });
+        
+        eleventyConfig.addFilter('documentToHtmlString', function(input) {
+            return documentToHtmlString(input);
+        });
+
+        eleventyConfig.addFilter('test', function(input) {
+            return "hey" + input ;
+        })
+    };
+
 // const fs = require('fs');
 
 // module.exports = (

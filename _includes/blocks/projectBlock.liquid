@@ -1,0 +1,6 @@
+<div class="ProjectBlock">
+    {{ fields.title }}
+    {% for project in fields.projects %}
+        {{ project.fields.title }}
+    {% endfor %}
+</div>

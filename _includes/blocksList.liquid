@@ -1,0 +1,6 @@
+{% if page %}
+    {% for block in page.blocks %}
+        {% capture includePath %}_includes/blocks/{{ block.sys.contentType.sys.id }}{% endcapture %}
+        {% include includePath with { fields : block.fields } %}
+    {% endfor %}
+{% endif %}
