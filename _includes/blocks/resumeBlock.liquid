@@ -1,3 +1,23 @@
 <div class="ResumeBlock">
-
+    <script>console.log({{ fields | json }})</script>
+    {% for section in fields.blockSections %}
+        {% assign title = section.fields.title %}
+        <h2>{{ title }}</h2> 
+        {% if title == 'Skills' %}
+            {% for element in section.fields.sectionElements %}
+                <div class="column">
+                    {% assign data = element.fields %}
+                    <h2>{{data.role}}</h2>
+                    {{ data.bodyRichText | documentToHtmlString }}
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for element in section.fields.sectionElements %}
+                {% assign data = element.fields %}
+                <h2>{{ data.role }}{% if data.company %} @ {{ data.company }}{% endif %}</h2>
+                {{ data.dateRange }}
+                {{ data.bodyRichText | documentToHtmlString }}<br>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
 </div>

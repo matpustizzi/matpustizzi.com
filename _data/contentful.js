@@ -8,7 +8,7 @@ module.exports = async function() {
     const entries = await client.getEntries({ 
             content_type: 'page', 
             order: 'sys.createdAt',
-            include: 2
+            include: 3
         })        
         .then(function(response) {
             const page = response.items

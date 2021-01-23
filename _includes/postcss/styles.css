@@ -1,0 +1,27 @@
+@import '_variables.css';
+@import '_fonts.css';
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+  
+
+body {
+    color: var(--text-color);
+    background-color: var(--background);
+    margin: 0;
+    font-family: ak, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: var(--accent);
+}
+
+.Container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}

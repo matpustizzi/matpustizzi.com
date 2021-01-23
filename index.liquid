@@ -5,4 +5,6 @@ eleventyComputed:
   title: "{{ globals.siteName }}"
 ---
 
-{% include "_includes/blocksList" with page : contentful.home[0] %}
+<div class="Container">
+  {% include "_includes/blocksList" with page : contentful.home[0] %}
+</div>

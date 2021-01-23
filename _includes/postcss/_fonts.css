@@ -1,0 +1,34 @@
+@font-face {
+  font-family: ak;
+  src: url(../fonts/ak.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ak;
+  src: url(../fonts/ak-bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ak;
+  src: url(../fonts/ak-light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ak-mono;
+  src: url(../fonts/ak-mono.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: nc;
+  src: url(../fonts/nc.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

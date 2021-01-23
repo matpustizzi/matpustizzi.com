@@ -12,6 +12,8 @@ eleventyComputed:
 
 ---
 
-{% for block in page.blocks %}
-  {% include "_includes/blocksList" with page %}
-{% endfor %}
+<div class="Container">
+  {% for block in page.blocks %}
+    {% include "_includes/blocksList" with page %}
+  {% endfor %}
+</div>
