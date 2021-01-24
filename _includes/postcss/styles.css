@@ -1,7 +1,16 @@
 @import '_variables.css';
 @import '_fonts.css';
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
+    font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
@@ -11,6 +20,7 @@ body {
     background-color: var(--background-color);
     margin: 0;
     font-family: var(--font-family-base);
+    font-size: rfs(16px);
 }
 
 a {
@@ -47,39 +57,53 @@ img {
 }
 
 .Heading {
-  font-weight: normal;
-  padding-top: 0;
+  font-family: var(--font-family-headings);
   line-height: 1.25;
-  font-family: var(--font-family--headings);
 }
 
 .Heading--sans-serif {
   font-family: var(--font-family-base);
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-bottom: 45px;
 }
 
 .Container {
     margin-left: auto;
     margin-right: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 2rem;
+    padding: 2rem;
 }
 
-.ProjectGrid {
-    display: flex;
-    margin-left: -10px;
-    margin-right: -10px;
+.Monospace {
+    font-family: var(--font-family-mono);
+    font-size: rfs(14px);
 }
 
-.Project {
-    flex: 1 100%;
-    align-self: stretch;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 20px;
+.WelcomeText {
+    a {
+        color: var(--text-color);
+        border-bottom: 1px solid var(--border-color);
+        text-decoration: none;
+        @media (hover: hover) {
+            &:hover {
+                color: var(--accent-color);
+                border-bottom: 1px solid var(--accent-color);
+                transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+        }
+    }
+    p {
+        font-size: rfs(45px);
+        max-width: 60%;
+        font-family: var(--font-family-headings);
+        line-height: 1.25;
+    }
+} 
+
+.Section {
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
-.Project__Border {
-    border: 1px solid var(--border-color);
-    padding: 20px;
-}
+@import '_welcome.css';
+@import '_project.css';

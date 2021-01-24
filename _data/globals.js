@@ -1,3 +1,3 @@
 module.exports = {
-    siteName : "Mathew Pustizzi"
+    siteName : "Mat Pustizzi"
 }

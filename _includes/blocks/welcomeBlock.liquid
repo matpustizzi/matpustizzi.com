@@ -1,3 +1,8 @@
-<div class="WelcomeBlock">
-     {{ fields.welcomeText | documentToHtmlString }}
+<div class="WelcomeBlock Section">
+     {% if fields.title %}
+          <div class="Heading--sans-serif">{{ fields.title }}</div>
+     {% endif %}
+     <div class="WelcomeText">
+          {{ fields.welcomeText | documentToHtmlString }}
+     </div>
 </div>

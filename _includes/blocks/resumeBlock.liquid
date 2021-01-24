@@ -1,5 +1,5 @@
 <div class="ResumeBlock">
-    <script>console.log({{ fields | json }})</script>
+    {% comment %} TODO: finish styling this {% endcomment %}
     {% for section in fields.blockSections %}
         {% assign title = section.fields.title %}
         <h2>{{ title }}</h2> 

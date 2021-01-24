@@ -8,6 +8,7 @@
     --white: #fcf2ed;
     --cyan: #6fffe9;
     --grey: #616e82;
+    --grey-2: #8796a9;
 }
 
 :root {
@@ -19,5 +20,5 @@
 
      /* theme type */
      --font-family-base: var(--font-family-sans-serif);
-     --font-family-display: var(--font-family-display-serif); 
+     --font-family-headings: var(--font-family-display-serif); 
 }
