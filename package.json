@@ -1,0 +1,26 @@
+{
+  "name": "matpustizzi.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "contentful": "^8.1.7",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.4",
+    "postcss-mixins": "^7.0.2",
+    "postcss-nesting": "^7.0.1",
+    "postcss-import": "^14.0.0",
+    "precss": "^4.0.0",
+    "rfs": "^9.0.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@contentful/rich-text-html-renderer": "^14.1.2"
+  },
+  "scripts": {
+    "build": "eleventy"
+  },
+  "author": "",
+  "license": "ISC"
+}
