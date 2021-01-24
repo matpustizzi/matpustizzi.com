@@ -1,5 +1,23 @@
 :root {
-    --background: #0b132b;
-    --text-color: #fcf2ed;
-    --accent: #6fffe9;
+    /* definitions */
+    --font-family-display-serif: nc, "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    --font-family-sans-serif: ak, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-mono: ak-mono, monospace;
+
+    --dark-blue: #0b132b;
+    --white: #fcf2ed;
+    --cyan: #6fffe9;
+    --grey: #616e82;
+}
+
+:root {
+     /* theme colors*/
+     --background-color: var(--dark-blue);
+     --text-color: var(--white);
+     --accent-color: var(--cyan);
+     --border-color: var(--grey);
+
+     /* theme type */
+     --font-family-base: var(--font-family-sans-serif);
+     --font-family-display: var(--font-family-display-serif); 
 }

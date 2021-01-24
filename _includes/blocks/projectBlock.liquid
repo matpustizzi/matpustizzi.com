@@ -1,6 +1,14 @@
 <div class="ProjectBlock">
     {{ fields.title }}
-    {% for project in fields.projects %}
-        {{ project.fields.title }}
-    {% endfor %}
+    <div class="ProjectGrid">
+        {% for project in fields.projects %}
+            <div class="Project">
+                <div class="Project__Border">
+                    {{ project | debug }}
+                    {{ project.fields.title }}
+                    {{ project.fields.url | extractDomain }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>

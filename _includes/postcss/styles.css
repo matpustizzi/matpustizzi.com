@@ -5,17 +5,56 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
-  
 
 body {
     color: var(--text-color);
-    background-color: var(--background);
+    background-color: var(--background-color);
     margin: 0;
-    font-family: ak, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--font-family-base);
 }
 
 a {
-    color: var(--accent);
+    color: var(--accent-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+    vertical-align: middle;
+}
+
+.Heading {
+  font-weight: normal;
+  padding-top: 0;
+  line-height: 1.25;
+  font-family: var(--font-family--headings);
+}
+
+.Heading--sans-serif {
+  font-family: var(--font-family-base);
 }
 
 .Container {
@@ -24,4 +63,23 @@ a {
     padding-right: 2rem;
     padding-left: 2rem;
     padding-top: 2rem;
+}
+
+.ProjectGrid {
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.Project {
+    flex: 1 100%;
+    align-self: stretch;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.Project__Border {
+    border: 1px solid var(--border-color);
+    padding: 20px;
 }
